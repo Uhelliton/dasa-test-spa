@@ -1,0 +1,21 @@
+@import '../functions';
+
+$gap--base: 6;
+
+$gap--xs: 12px;
+$gap--xsl: 16px;
+$gap--sm: 20px;
+$gap--sml: 24px;
+$gap--md: 32px;
+$gap--mdl: 36px;
+$gap--lg: 40px;
+$gap--xl: 48px;
+
+$gap-rem--xs: pxToRem(12);
+$gap-rem--xsl: pxToRem(16);
+$gap-rem--sm: pxToRem(20);
+$gap-rem--sml: pxToRem(24);
+$gap-rem--md: pxToRem(32);
+$gap-rem--mdl: pxToRem(36);
+$gap-rem--lg: pxToRem(40);
+$gap-rem--xl: pxToRem(48);

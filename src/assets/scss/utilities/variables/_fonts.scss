@@ -1,0 +1,24 @@
+@import '../functions';
+
+$font-size: 8;
+
+$font-base: 16 !default;
+$font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Helvetica, Arial, sans-serif;
+
+$font--xs: 12px;
+$font--xsl: 14px;
+$font--sm: 16px;
+$font--sml: 18px;
+$font--md: 20px;
+$font--mdl: 24px;
+$font--lg: 30px;
+$font--xl: 36px;
+
+$font-rem--xs: pxToRem(12);
+$font-rem--xsl: pxToRem(14);
+$font-rem--sm: pxToRem(16);
+$font-rem--sml: pxToRem(18);
+$font-rem--md: pxToRem(20);
+$font-rem--mdl: pxToRem(24);
+$font-rem--lg: pxToRem(30);
+$font-rem--xl: pxToRem(36);

@@ -1,0 +1,52 @@
+@import '../utilities/all';
+
+.m-input {
+  &.q-field--dense {
+    max-height: pxToRem(36);
+
+    .q-field__control {
+      &:before {
+        border-color: $color-gris-05;
+      }
+
+      &:after {
+        height: initial;
+      }
+    }
+
+    .q-field__native {
+      font-family: $font-family;
+      height: 100%;
+      //max-height: pxToRem(36);
+      padding: pxToRem(10) pxToRem(16);
+
+      @include placeholder() {
+        color: $color-gris-01;
+      }
+    }
+  }
+
+  &--bgWhite {
+    .q-field__inner {
+      background: $color-white;
+      border-radius: pxToRem(24);
+    }
+  }
+}
+
+.m-formBox {
+  &_content {
+    max-width: pxToRem(492);
+  }
+
+  &_subForm {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+
+    .m-button:last-child {
+      margin-left: $gap-rem--xs;
+      min-width: pxToRem(162);
+    }
+  }
+}

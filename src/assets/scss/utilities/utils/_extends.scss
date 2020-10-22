@@ -1,0 +1,53 @@
+@import '../functions';
+@import '../variables/colors';
+@import '../variables/gaps';
+@import '../variables/helpers';
+
+%reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%reset-link {
+  text-decoration: none;
+
+  &:visited { color: auto; }
+}
+
+%reset-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  + a,
+  + button {
+    margin-left: $gap-rem--xsl;
+  }
+}
+
+%card-base {
+  background-color: $color-white;
+  border-radius: pxToRem(6);
+  box-shadow: 0 pxToRem(2) pxToRem(2) rgba($color-dark-01, .15);
+  padding: $gap-rem--xsl;
+  cursor: pointer;
+
+  @media(min-width: $responsive-lg) {
+    padding: $gap-rem--sm;
+  }
+}
+
+%flex-between-center {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}

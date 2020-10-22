@@ -1,0 +1,29 @@
+@import '../utilities/all';
+
+@each $size, $val in $map-sizes {
+  .s-padding--#{$size} {
+    padding: $val;
+  }
+
+  .s-paddingBottom--#{$size} {
+    padding-bottom: $val;
+  }
+
+  .s-paddingTop--#{$size} {
+    padding-top: $val;
+  }
+
+  .s-paddingX--#{$size} {
+    padding: {
+      left: $val;
+      right: $val;
+    }
+  }
+
+  .s-paddingY--#{$size} {
+    padding: {
+      top: $val;
+      bottom: $val;
+    }
+  }
+}

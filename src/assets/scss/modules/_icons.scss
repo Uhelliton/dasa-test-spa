@@ -1,0 +1,56 @@
+@import '../utilities/all';
+
+.m-icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 100%;
+  transition: fill .15s linear, height .15s linear, width .15s linear;
+  width: 100%;
+
+  &--xs,
+  &--xsl,
+  &--sm,
+  &--sml,
+  &--md,
+  &--mdl,
+  &--lg,
+  &--xl {
+    @extend .m-icon;
+  }
+
+  &--xs {
+    height: pxToRem(12);
+    min-width: pxToRem(12);
+    width: pxToRem(12);
+  }
+
+  &--xsl {
+    height: pxToRem(16);
+    min-width: pxToRem(16);
+    width: pxToRem(16);
+  }
+
+  &--sm {
+    height: pxToRem(24);
+    min-width: pxToRem(24);
+    width: pxToRem(24);
+  }
+
+  &--sml {
+    height: pxToRem(32);
+    min-width: pxToRem(32);
+    width: pxToRem(32);
+  }
+
+  &--md {
+    height: pxToRem(48);
+    min-width: pxToRem(48);
+    width: pxToRem(48);
+  }
+
+  &--mdl {}
+
+  &--lg {}
+
+  &--xl {}
+}

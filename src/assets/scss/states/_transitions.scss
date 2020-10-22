@@ -1,0 +1,13 @@
+@import '../utilities/all';
+
+@keyframes bounce-in {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(#{pxToRem(180)});
+  }
+  100% {
+    transform: translateX(#{pxToRem(360)});
+  }
+}

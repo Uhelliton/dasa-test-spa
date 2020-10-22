@@ -1,0 +1,203 @@
+@import '../utilities/all';
+
+.m-table {
+  color: $color-gray;
+
+  &_iconBox {
+    @extend %flex-between-center;
+    height: 100%;
+  }
+
+  &_icon {
+    margin-left: pxToRem(8);
+    transition: transform .15s linear;
+  }
+
+  &.q-table__container {
+    border-radius: 0;
+    box-shadow: 0 pxToRem(2) pxToRem(2) rgba($color-dark-01, .15);
+    padding: $gap-rem--sml $gap-rem--xs;
+
+    @media(min-width: $responsive-mdl) {
+      padding: $gap-rem--sml;
+    }
+  }
+
+
+  .q-table__middle.scroll {
+    @include scrollbars(pxToRem(6), $color-gray, pxToRem(8));
+  }
+
+  &--shadowRemove {
+    box-shadow: none!important;
+    padding: 0!important;
+  }
+
+  .q-table {
+    thead {
+      th {
+        padding: pxToRem(12) pxToRem(8);
+
+        &:not(.s-clearTh) {
+          background-color: $color-light-01;
+        }
+
+        transition: background-color .15s linear;
+
+        &:hover {
+          background-color: rgba($color-light-01, .65);
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: $color-light-01;
+          transition: background-color .25s linear;
+        }
+
+        &:hover {
+          background-color: inherit;
+        }
+      }
+
+      td {
+        padding: pxToRem(12) pxToRem(8);
+      }
+    }
+  }
+
+  .q-table__sort-icon {
+    display: none;
+  }
+
+  &--breakSpace {
+    &.q-table--no-wrap {
+      th, td {
+        white-space: inherit;
+      }
+    }
+  }
+
+  .sorted {
+    &:not(.sort-desc) {
+      .m-table_icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+thead {
+  th {
+    padding: pxToRem(12) pxToRem(8);
+
+    &:not(.s-clearTh) {
+      background-color: $color-light-01;
+    }
+
+    transition: background-color .15s linear;
+
+    &:hover {
+      background-color: rgba($color-light-01, .65);
+    }
+  }
+}
+
+tbody {
+  tr {
+    &:nth-child(even) {
+      background-color: $color-light-01;
+      transition: background-color .25s linear;
+    }
+
+    &:hover {
+      background-color: inherit;
+    }
+  }
+
+  td {
+    padding: pxToRem(12) pxToRem(8);
+  }
+}

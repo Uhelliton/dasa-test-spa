@@ -1,0 +1,46 @@
+@import '../utilities/all';
+
+.l-headSection {
+  @extend %flex-between-center;
+  margin-bottom: $gap-rem--sm;
+
+  .m-titleSection {
+    margin: 0;
+    padding-right: $gap-rem--xs;
+  }
+
+  @media(min-width: $responsive-lg) {
+    margin-bottom: $gap-rem--md;
+  }
+}
+
+.l-gridBackOffice,
+.l-gridByFour {
+  display: grid;
+  grid-gap: $gap-rem--xsl;
+}
+
+.l-gridBackOffice {
+  @media(min-width: $responsive-sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media(min-width: $responsive-mdl) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: pxToRem(20);
+  }
+}
+
+.l-gridByFour {
+  @media(min-width: $responsive-xsl) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media(min-width: $responsive-mdl) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media(min-width: $responsive-lg) {
+    grid-gap: pxToRem(20);
+  }
+}

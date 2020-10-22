@@ -1,0 +1,13 @@
+@import '../functions';
+
+$responsive-xs: pxToRem(440);
+$responsive-xsl: pxToRem(568);
+$responsive-sm: pxToRem(768);
+$responsive-sml: pxToRem(912);
+$responsive-md: pxToRem(992);
+$responsive-mdl: pxToRem(1080);
+$responsive-lg: pxToRem(1200);
+$responsive-xl: pxToRem(1280);
+
+$tablet-width: pxToRem(768);
+$desktop-width: pxToRem(1024);

@@ -1,0 +1,20 @@
+@import '../functions';
+@use 'sass:list';
+@use 'sass:map';
+
+
+$list-sizes: ('xs', 'xsl', 'sm', 'sml', 'md', 'mdl', 'lg', 'xl');
+$list-count: length($list-sizes);
+$list-values: (pxToRem(12), pxToRem(14), pxToRem(16), pxToRem(18), pxToRem(20), pxToRem(24), pxToRem(30), pxToRem(36));
+
+$map-sizes: (
+  xs: pxToRem(12),
+  xsl: pxToRem(14),
+  sm: pxToRem(16),
+  sml: pxToRem(18),
+  md: pxToRem(20),
+  mdl: pxToRem(24),
+  lg: pxToRem(30),
+  xl: pxToRem(36),
+);
+

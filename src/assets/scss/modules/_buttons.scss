@@ -1,0 +1,39 @@
+@import '../utilities/all';
+
+.m-button {
+  &--reset {
+    @extend %reset-btn;
+    color: currentColor;
+  }
+
+  &--sm {
+    .q-btn.q-btn-item {
+      height: pxToRem(36);
+    }
+  }
+  &--warning{
+    .q-btn.q-btn-item {
+      color: $color-warning!important;
+    }
+  }
+
+  &--link {
+    @extend %reset-link;
+    color: $color-dark-02;
+    display: inline-block;
+    font-size: $font--xsl;
+    font-weight: 600;
+    line-height: pxToRem(20);
+    padding: pxToRem(8) $gap-rem--xs;
+    text-transform: capitalize;
+    transition: color .15s linear;
+
+    &:visited {
+      color: $color-dark-02;
+    }
+
+    &:hover, &:focus {
+      color: rgba($color-dark-02, .75);
+    }
+  }
+}

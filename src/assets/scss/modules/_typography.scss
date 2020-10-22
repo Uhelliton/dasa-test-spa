@@ -1,0 +1,58 @@
+@import '../utilities/all';
+
+.m-titleSection {
+  color: $color-dark-02;
+  font-size: pxToRem(28);
+  font-weight: 600;
+  line-height: pxToRem(32);
+  margin-bottom: $gap-rem--sm;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+
+  small {
+    font-size: $font-rem--xs;
+    font-weight: 400;
+
+    @media(min-width: $responsive-sm) {
+      font-size: $font-rem--xsl;
+    }
+  }
+
+  &--small {
+    @extend .m-titleSection;
+    font-size: pxToRem(18);
+    line-height: pxToRem(24);
+  }
+
+  &--xsmall {
+    @extend .m-titleSection;
+    font-size: pxToRem(16);
+    line-height: pxToRem(24);
+  }
+
+  @media(min-width: $responsive-sm) {
+    &--small {
+      font-size: pxToRem(20);
+    }
+
+    &--xsmall {
+      font-size: pxToRem(18);
+    }
+
+    margin-bottom: $gap-rem--md;
+  }
+}
+
+.m-paragraph {
+  color: $color-gray;
+  font-size: $font-rem--sm;
+  font-weight: 400;
+  line-height: pxToRem(18);
+
+  &--small {
+    @extend .m-paragraph;
+    font-size: $font-rem--xs;
+  }
+}

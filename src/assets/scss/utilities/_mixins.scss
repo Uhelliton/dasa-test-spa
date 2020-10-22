@@ -1,0 +1,63 @@
+@import 'functions';
+@import 'variables/helpers';
+
+@mixin placeholder {
+  &:-ms-input-placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin scrollbars($size, $color, $height) {
+  &::-webkit-scrollbar {
+    @if ($height) {
+      height: $height;
+    }
+
+    width:  $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    border-radius: pxToRem(4);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba($color, .4);
+    border-radius: pxToRem(4);
+    width: $size;
+  }
+
+  // For Internet Explorer
+  body & {
+    scrollbar-face-color: rgba($color, .5);
+    scrollbar-track-color: rgba($color, .8);
+  }
+}
+
+
+@mixin mediaQueryTablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mediaQueryDesktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

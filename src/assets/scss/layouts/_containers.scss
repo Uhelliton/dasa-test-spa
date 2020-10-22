@@ -1,0 +1,58 @@
+@import '../utilities/all';
+
+.l-main {
+  padding: $gap-rem--sm;
+  max-width: pxToRem(1440);
+  margin: 0 auto;
+  width: 100%;
+
+  @media(min-width: $responsive-md) {
+    padding: $gap-rem--sml $gap-rem--md;
+  }
+}
+
+.l-boxContent {
+  background-color: $color-white;
+  box-shadow: 0 pxToRem(2) pxToRem(2) 0 rgba($color-dark-01, .15);
+  padding: $gap-rem--xs;
+
+  &_head {
+    border-bottom: pxToRem(1) solid $color-gris-05;
+    margin-bottom: $gap-rem--xsl;
+    padding-bottom: $gap-rem--xs;
+
+    &_grid {
+      @extend %flex-between-center;
+
+      &--start {
+        @extend %flex-between-center;
+        align-items: flex-start;
+      }
+    }
+
+    &_box {}
+
+    &_title {
+      color: $color-dark-02;
+      font: {
+        size: $font-rem--md;
+        weight: 700;
+      }
+      line-height: $gap-rem--md;
+    }
+
+    &_subtitle {
+      color: $color-gris-08;
+      font: {
+        size: $font-rem--xsl;
+      }
+      line-height: $gap-rem--sml;
+    }
+  }
+
+  @media(min-width: $responsive-sm) {
+    padding: $gap-rem--sml;
+  }
+}
+
+.l-section {}

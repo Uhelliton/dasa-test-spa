@@ -1,0 +1,23 @@
+@import 'utilities/_all';
+
+// app global css in SCSS
+@import 'base/_base';
+
+// layouts
+@import 'layouts/_containers';
+@import 'layouts/_grids';
+
+// módulos globais
+@import 'modules/_icons';
+@import 'modules/_buttons';
+@import 'modules/_forms';
+@import 'modules/_typography';
+@import 'modules/_tables';
+
+// estados de alteração
+@import 'states/_animations';
+@import 'states/_colors';
+@import 'states/_margins';
+@import 'states/_paddings';
+@import 'states/_transitions';
+@import 'states/_typography';
