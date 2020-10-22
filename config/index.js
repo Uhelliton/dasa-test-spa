@@ -5,18 +5,12 @@
 const path = require('path')
 
 module.exports = {
-
-  module: {
-    loaders: [
-      {
-        test: /\.vue$/,
-        loader: 'vue'
-      },
-      {
-        test: /\.s[a|c]ss$/,
-        loader: 'style!css!sass'
-      }
-    ]
+  resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    alias: {
+      '@': path.resolve('src'), // use @/app..,
+      'src': path.resolve(__dirname, '../src'),
+    }
   },
   dev: {
 
