@@ -1,52 +1,42 @@
 @import '../utilities/all';
 
 .m-input {
-  &.q-field--dense {
-    max-height: pxToRem(36);
-
-    .q-field__control {
-      &:before {
-        border-color: $color-gris-05;
-      }
-
-      &:after {
-        height: initial;
-      }
-    }
-
-    .q-field__native {
-      font-family: $font-family;
-      height: 100%;
-      //max-height: pxToRem(36);
-      padding: pxToRem(10) pxToRem(16);
-
-      @include placeholder() {
-        color: $color-gris-01;
-      }
+  label {
+    font-size: $font--xsl;
+    font-weight: 400;
+    color: #3F4254;
+    input {
+      margin-bottom: pxToRem(10);
     }
   }
 
-  &--bgWhite {
-    .q-field__inner {
-      background: $color-white;
-      border-radius: pxToRem(24);
-    }
+  input {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 1.3rem + 2px);
+    padding: 0.65rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $color-gray;
+    background-color: $color-white;
+    background-clip: padding-box;
+    border: 1px solid $color-gris-05;
+    border-radius: 0.42rem;
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 }
 
-.m-formBox {
+.m-form {
   &_content {
     max-width: pxToRem(492);
   }
 
-  &_subForm {
+  &_action {
     align-items: center;
     display: flex;
-    justify-content: flex-end;
-
-    .m-button:last-child {
-      margin-left: $gap-rem--xs;
-      min-width: pxToRem(162);
-    }
+    justify-content: center;
+    margin-top: pxToRem(40);
   }
 }

@@ -8,8 +8,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      '@': path.resolve('src'), // use @/app..,
-      'src': path.resolve(__dirname, '../src'),
+      '@': path.resolve('src'), // use @/app.., @/assets.
+      '': path.resolve('src'),
     }
   },
   dev: {

@@ -1,20 +1,34 @@
 @import '../utilities/all';
 
 .m-button {
+  outline: none;
+  vertical-align: middle;
+  height: pxToRem(40);
+  padding: pxToRem(10) pxToEm(60);
+  border: none;
+  background: $color-primary;
+  color: $color-white;
+  font: {
+    size: $font--sm ;
+  };
+  cursor: pointer;
+  @extend %rounded-corners;
+
   &--reset {
     @extend %reset-btn;
     color: currentColor;
   }
 
   &--sm {
-    .q-btn.q-btn-item {
-      height: pxToRem(36);
-    }
+    height: pxToRem(36);
   }
+
+  &--fullWith {
+   width: 100%!important;
+  }
+
   &--warning{
-    .q-btn.q-btn-item {
-      color: $color-warning!important;
-    }
+    color: $color-warning!important;
   }
 
   &--link {

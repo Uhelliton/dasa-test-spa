@@ -1,4 +1,4 @@
-import http from '@/app/supports/http/config.js'
+import http from './../http/config.js'
 
 const HttpServices = {
   /*!

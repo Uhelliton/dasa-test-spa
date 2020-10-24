@@ -1,7 +1,7 @@
 @import '../utilities/all';
 
 //importação direta do do google fontes
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
 
 //renderização máxima de viewport para IE/EDGE em MOBILE/TABLETS
 @-ms-viewport {
@@ -41,7 +41,7 @@ form {
 
 body {
   background-color: $color-gris-04;
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Helvetica, Arial, sans-serif;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Helvetica, Arial, sans-serif;
   font-weight: 400;
   @include scrollbars(pxToRem(8), $color-gray, null);
 

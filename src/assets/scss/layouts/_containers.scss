@@ -15,6 +15,7 @@
   background-color: $color-white;
   box-shadow: 0 pxToRem(2) pxToRem(2) 0 rgba($color-dark-01, .15);
   padding: $gap-rem--xs;
+  border-radius: pxToEm(6);
 
   &_head {
     border-bottom: pxToRem(1) solid $color-gris-05;
@@ -36,7 +37,7 @@
       color: $color-dark-02;
       font: {
         size: $font-rem--md;
-        weight: 700;
+        weight: 500;
       }
       line-height: $gap-rem--md;
     }
@@ -56,3 +57,10 @@
 }
 
 .l-section {}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
