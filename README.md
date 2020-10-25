@@ -1,27 +1,61 @@
-# dasa-test-spa
+# Dasa test-spa
 
-> A Vue.js project
+> Teste para avaliação técnica de front-end.
+>
+> Construção de uma aplicação SPA(Single Page Applications)
 
-## Build Setup
+[![GitHub license](https://img.shields.io/github/license/uhelliton/dasa-test-spa)](https://github.com/uhelliton/dasa-test-spa/blob/master/LICENSE) 
+![](https://img.shields.io/badge/languege-Portuguese-yellow)
+[![GitHub stars](https://img.shields.io/github/stars/uhelliton/dasa-test-spa?color=FFF300&style=social)](https://github.com/uhelliton/dasa-test-spa)
 
+## Pré-requisitos
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
 ``` bash
-# install dependencies
+# Clone este repositório
+$ git clone <https://github.com/Uhelliton/dasa-test-spa.git>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd dasa-test-spa
+  
+# Instale as dependências
 npm install
 
-# serve with hot reload at localhost:8080
+# Execute a aplicação em modo de desenvolvimento
 npm run dev
 
-# build for production with minification
+# O servidor inciará na porta:8080 - acesse <http://localhost:8080>
+
+# construir o app para produção com minificação
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
+# executar testes de unidade
 npm run unit
 
-# run all tests
+# executar todos testes
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Vue.js](https://vuejs.org/v2/guide/)
+- [Vue Test Utils](https://vue-test-utils.vuejs.org/guides/)
+- [Jest js](https://jestjs.io/)
+- [Sass](https://sass-lang.com/)
+- [Eslint](https://eslint.org/)
+
+### 🛠 Tecnologias
+
+As seguintes arquitetura e metodologia css foram usadas:
+
+- [BEM](http://getbem.com/)
+- [SMACSS](http://smacss.com/)
+
+### Funcionalidade desenvolvidas
+
+- [x] Tela de Login
+- [x] Dashboard
+- [x] Listagem de usuários
+
