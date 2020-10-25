@@ -9,56 +9,21 @@ export default {
   name: 'UserTable',
   components: { CardBox, AppTable, AppInput },
   data: () => ({
-    pagination: {
-      rowsPerPage: 10,
-      pageNumber: 1
-    },
     datatable: {
       filterKey: '',
       thead: [
         { field: 'id', label: 'ID', sortable: true },
         { field: 'login', label: 'Login', sortable: true },
-        { field: 'html_url', label: 'Url', sortable: true },
+        { field: 'node_id', label: 'Node ID', sortable: true },
         { field: 'type', label: 'Tipo' },
-        { field: 'actions', label: '' }
+        { field: 'site_admin', label: 'Admin' }
       ],
       rows: []
-    }
+    },
+    dataFiltered: []
   }),
   async mounted () {
     await this.fetchUsers()
-  },
-  computed: {
-    pageNumber () {
-      return this.pagination.pageNumber
-    },
-    filtered () {
-      let filterKey = this.datatable.filterKey && this.datatable.filterKey.toLowerCase()
-      let heroes = this.datatable.rows
-      if (filterKey) {
-        heroes = heroes.filter((row) => {
-          return Object.keys(row).some((key) => {
-            return (
-              String(row[key])
-                .toLowerCase()
-                .indexOf(filterKey) > -1
-            )
-          })
-        })
-      }
-      return heroes
-    },
-    paginatedData () {
-      const { pageNumber, rowsPerPage } = this.pagination
-      const start = pageNumber * pageNumber
-      const end = start + rowsPerPage
-
-      if (this.filtered.length <= rowsPerPage) {
-        return this.filtered
-      }
-
-      return this.filtered.slice(start, end)
-    }
   },
   methods: {
     async fetchUsers () {
@@ -72,8 +37,8 @@ export default {
         console.log(e)
       }
     },
-    goToPage (page) {
-      this.pagination.pageNumber = page
+    onListenRenderTable (data) {
+      this.dataFiltered = data
     }
   }
 }
@@ -93,29 +58,24 @@ export default {
                    label="Buscar" />
       </div>
     </div>
-    <app-table :thead="datatable.thead">
+    <app-table :thead="datatable.thead"
+               :rows="datatable.rows"
+               @renderData="onListenRenderTable"
+               :filterKey="datatable.filterKey">
       <template #tbody>
-        <tr v-for="(row, index) in paginatedData" :key="index">
-          <td scope="row" :data-label="row.label">{{ row.id }}</td>
-          <td scope="row" :data-label="row.label">{{ row.login }}</td>
-          <td scope="row" :data-label="row.label">{{ row.html_url }}</td>
-          <td scope="row" :data-label="row.label">{{ row.type }}</td>
-          <td scope="row" :data-label="row.label">
-            suycesso
+        <tr v-for="(row, index) in dataFiltered" :key="index">
+          <td scope="row" data-label="ID">{{ row.id }}</td>
+          <td scope="row" data-label="Login">{{ row.login }}</td>
+          <td scope="row" data-label="Node ID">{{ row.node_id }}</td>
+          <td scope="row" data-label="Tipo">{{ row.type }}</td>
+          <td scope="row" data-label="Admin">
+            <span class="m-badge"
+                  :class="[{'m-badge--success': (index % 2 == 0)}, {'m-badge--warning': (index % 2 != 0)}]">
+              {{ (row.site_admin) ? 'Administrador' : 'Administrador' }}
+            </span>
           </td>
         </tr>
       </template>
     </app-table>
-    <div>
-      <ul class="m-pagination">
-        <li :key="index"
-            class="m-pagination_item"
-            :class="{'m-pagination_item--active': pageNumber === pagination}"
-            @click="goToPage(pagination)"
-            v-for="(pagination, index) in datatable.rows.length / pagination.rowsPerPage">
-            {{ pagination}}
-        </li>
-      </ul>
-    </div>
   </card-box>
 </template>

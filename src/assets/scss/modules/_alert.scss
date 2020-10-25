@@ -1,0 +1,19 @@
+@import "../utilities/all";
+.m-badge {
+  font: {
+    size: $font-rem--xs;
+    weight: normal;
+  }
+  @extend %rounded-corners;
+  padding: pxToRem(2) pxToRem(6);
+
+  &--success {
+    background: $color-success;
+    color: $color-white;
+  }
+
+  &--warning {
+    background: $color-warning;
+    color: $color-white;
+  }
+}

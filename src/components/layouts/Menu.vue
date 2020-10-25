@@ -6,10 +6,14 @@ export default {
   name: 'Menu',
   components: { Icon },
   computed: {
-    ...mapGetters('user', ['user'])
+    ...mapGetters({
+      user: 'user/user'
+    })
   },
   methods: {
-    ...mapActions('user', ['logout']),
+    ...mapActions({
+      logout: 'user/logout'
+    }),
     onLogout () {
       this.logout()
       this.$router.push({ name: 'auth.index' })
@@ -24,7 +28,6 @@ export default {
     <header class="m-menu_avatar">
       <img src="https://avatars3.githubusercontent.com/u/14768762?s=460&u=85195cde1906a2c9a1214b54375b4fc3ddd02c57&v=4"
            width="128" />
-      <h2>{{ user.name }}</h2>
     </header>
     <ul>
       <li tabindex="0">

@@ -2,44 +2,79 @@
 /**
  * @jest-environment node
  */
-import Vuex from 'vuex'
 import { shallowMount, createLocalVue, config  } from '@vue/test-utils'
+import Vuex from 'vuex'
 import Menu from '@/components/layouts/Menu'
+import Icon from '@/components/svg/Icon'
 import sinon from 'sinon'
-import { __createMocks as createStoreMocks } from '../../app/domains/__mocks__/store-mock'
-
 config.showDeprecationWarnings = false
 
-// Tell Jest to use the mock
-// implementation of the store.
-jest.mock('../../app/domains/__mocks__/store-mock');
 const localVue = createLocalVue()
 localVue.use(Vuex)
 
 describe('Menu.vue', () => {
-  let storeMocks
+  let actions
+  let getters
+  let state
+  let store
 
   beforeEach(() => {
-    // Create a fresh store and wrapper
-    // instance for every test case.
-    storeMocks = createStoreMocks()
+    state = {
+      user: {
+        name: 'Uhelliton Andrade',
+        email: 'uhlliton@uol.com.br'
+      },
+      token: 'eyJhbGciOiJIUzI1NiJ9'
+    }
+    actions = {
+      attemptLogin: jest.fn(),
+      logout: jest.fn()
+    }
+    getters = {
+      user: () => {
+        return {
+          name: 'Uhelliton Andrade',
+          email: 'uhlliton@uol.com.br'
+        }
+      },
+      token: () => {
+        return 'eyJhbGciOiJIUzI1NiJ9'
+      }
+    },
+    store = new Vuex.Store({
+      modules: {
+        user: {
+          actions,
+          state,
+          getters,
+          namespaced: true
+        }
+      }
+    })
   })
-
 
   const build = () => {
     const wrapper = shallowMount(Menu, {
       localVue,
+      store,
       stubs: {}
     })
 
     return {
       wrapper,
+      Icon: () => wrapper.findComponent(Icon)
     }
   }
 
   it('should render instance component', () => {
     const { wrapper } = build()
     expect(wrapper.vm).toBeTruthy()
+  })
+
+  it('renders main children components', () => {
+    const { Icon } =  build()
+
+    expect(Icon().exists()).toBe(true)
   })
 
   it('clicking logout button triggers onLogout()', () => {
