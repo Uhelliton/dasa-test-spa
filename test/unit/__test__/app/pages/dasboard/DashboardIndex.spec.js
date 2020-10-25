@@ -4,17 +4,15 @@
  */
 import { shallowMount } from '@vue/test-utils'
 import DashboardIndex from '@/app/pages/dashboard/views/DashboardIndex'
-import CardBox from '@/components/layouts/CardBox'
 import UserTable from '@/app/pages/dashboard/components/UserTable'
 
-describe('AuthIndex.vue', () => {
+describe('DashboardIndex.vue', () => {
   const build = () => {
     const wrapper = shallowMount(DashboardIndex)
 
     return {
       wrapper,
-      UserTable: () => wrapper.findComponent(UserTable),
-      CardBox: () => wrapper.findComponent(CardBox)
+      UserTable: () => wrapper.findComponent(UserTable)
     }
   }
 
@@ -24,9 +22,8 @@ describe('AuthIndex.vue', () => {
   })
 
   it('renders main children components', () => {
-    const { UserTable, CardBox } =  build()
+    const { UserTable } =  build()
 
-    expect(CardBox().exists()).toBe(true)
     expect(UserTable().exists()).toBe(true)
   })
 })

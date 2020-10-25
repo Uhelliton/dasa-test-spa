@@ -24,8 +24,6 @@ export default {
   .l-layout {
     &_content {
       height: inherit;
-      margin-left: pxToRem(60);
-      margin-top: pxToRem(48);
       padding: $gap-rem--xsl;
     }
   }

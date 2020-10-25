@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1603557036390" clover="3.2.0">
-  <project timestamp="1603557036390" name="All files">
-    <metrics statements="99" coveredstatements="6" conditionals="24" coveredconditionals="0" methods="42" coveredmethods="0" elements="165" coveredelements="6" complexity="0" loc="99" ncloc="99" packages="17" files="23" classes="23">
+<coverage generated="1603588150301" clover="3.2.0">
+  <project timestamp="1603588150301" name="All files">
+    <metrics statements="115" coveredstatements="22" conditionals="28" coveredconditionals="3" methods="51" coveredmethods="9" elements="194" coveredelements="34" complexity="0" loc="115" ncloc="115" packages="18" files="24" classes="24">
       <package name="src">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="App.vue" path="C:\Webserver\www\tests\dasa-test-spa\src\App.vue">
@@ -94,52 +94,63 @@
         </file>
       </package>
       <package name="src.app.pages.dashboard.components">
-        <metrics statements="12" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <metrics statements="24" coveredstatements="8" conditionals="14" coveredconditionals="2" methods="8" coveredmethods="3"/>
         <file name="UserTable.vue" path="C:\Webserver\www\tests\dasa-test-spa\src\app\pages\dashboard\components\UserTable.vue">
-          <metrics statements="12" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="3" coveredmethods="0"/>
-          <line num="2" count="0" type="stmt"/>
-          <line num="3" count="0" type="stmt"/>
-          <line num="4" count="0" type="stmt"/>
-          <line num="5" count="0" type="stmt"/>
-          <line num="10" count="0" type="stmt"/>
-          <line num="22" count="0" type="cond" truecount="0" falsecount="3"/>
-          <line num="26" count="0" type="cond" truecount="0" falsecount="5"/>
-          <line num="28" count="0" type="stmt"/>
-          <line num="29" count="0" type="stmt"/>
-          <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="31" count="0" type="stmt"/>
+          <metrics statements="24" coveredstatements="8" conditionals="14" coveredconditionals="2" methods="8" coveredmethods="3"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="11" count="3" type="stmt"/>
+          <line num="28" count="21" type="cond" truecount="1" falsecount="2"/>
+          <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="34" count="0" type="stmt"/>
+          <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="46" count="0" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="52" count="0" type="stmt"/>
+          <line num="56" count="24" type="cond" truecount="1" falsecount="4"/>
+          <line num="58" count="0" type="stmt"/>
+          <line num="59" count="0" type="stmt"/>
+          <line num="60" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="61" count="0" type="stmt"/>
+          <line num="64" count="0" type="stmt"/>
+          <line num="68" count="0" type="stmt"/>
         </file>
       </package>
       <package name="src.app.pages.dashboard.views">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="DashboardIndex.vue" path="C:\Webserver\www\tests\dasa-test-spa\src\app\pages\dashboard\views\DashboardIndex.vue">
-          <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="2" count="0" type="stmt"/>
-          <line num="3" count="0" type="stmt"/>
-          <line num="8" count="0" type="stmt"/>
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
         </file>
       </package>
       <package name="src.app.supports.http">
-        <metrics statements="8" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <metrics statements="8" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="1"/>
         <file name="config.js" path="C:\Webserver\www\tests\dasa-test-spa\src\app\supports\http\config.js">
-          <metrics statements="8" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
-          <line num="4" count="1" type="stmt"/>
-          <line num="9" count="1" type="stmt"/>
-          <line num="10" count="0" type="stmt"/>
+          <metrics statements="8" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="1"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="10" count="3" type="stmt"/>
           <line num="12" count="0" type="stmt"/>
-          <line num="16" count="1" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
           <line num="17" count="0" type="stmt"/>
           <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="23" count="0" type="stmt"/>
         </file>
       </package>
       <package name="src.app.supports.services">
-        <metrics statements="17" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="14" coveredmethods="0"/>
+        <metrics statements="17" coveredstatements="3" conditionals="4" coveredconditionals="1" methods="14" coveredmethods="2"/>
         <file name="http-services.js" path="C:\Webserver\www\tests\dasa-test-spa\src\app\supports\services\http-services.js">
-          <metrics statements="9" coveredstatements="1" conditionals="1" coveredconditionals="0" methods="8" coveredmethods="0"/>
-          <line num="3" count="1" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
+          <metrics statements="9" coveredstatements="2" conditionals="1" coveredconditionals="0" methods="8" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="9" count="3" type="stmt"/>
           <line num="10" count="0" type="stmt"/>
           <line num="20" count="0" type="stmt"/>
           <line num="21" count="0" type="stmt"/>
@@ -149,7 +160,7 @@
           <line num="43" count="0" type="stmt"/>
         </file>
         <file name="rest-services.js" path="C:\Webserver\www\tests\dasa-test-spa\src\app\supports\services\rest-services.js">
-          <metrics statements="8" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="6" coveredmethods="0"/>
+          <metrics statements="8" coveredstatements="1" conditionals="3" coveredconditionals="1" methods="6" coveredmethods="1"/>
           <line num="12" count="0" type="stmt"/>
           <line num="20" count="0" type="stmt"/>
           <line num="28" count="0" type="stmt"/>
@@ -157,7 +168,7 @@
           <line num="44" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="45" count="0" type="stmt"/>
           <line num="47" count="0" type="stmt"/>
-          <line num="55" count="0" type="stmt"/>
+          <line num="55" count="3" type="stmt"/>
         </file>
       </package>
       <package name="src.app.supports.utils">
@@ -168,7 +179,16 @@
         </file>
         <file name="context.js" path="C:\Webserver\www\tests\dasa-test-spa\src\app\supports\utils\context.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="5" count="1" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.form">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <file name="AppInput.vue" path="C:\Webserver\www\tests\dasa-test-spa\src\components\form\AppInput.vue">
+          <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+          <line num="26" count="9" type="stmt"/>
+          <line num="28" count="9" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
         </file>
       </package>
       <package name="src.components.layouts">
@@ -189,10 +209,12 @@
         </file>
       </package>
       <package name="src.components.table">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <file name="AppTable.vue" path="C:\Webserver\www\tests\dasa-test-spa\src\components\table\AppTable.vue">
-          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="8" count="0" type="stmt"/>
+          <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="14" count="3" type="stmt"/>
         </file>
       </package>
       <package name="src.router">

@@ -1,0 +1,28 @@
+@import "../utilities/all";
+
+.m-pagination  {
+  margin: pxToEm(20) 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+
+  &_item {
+    list-style-type: none;
+    margin-right: pxToEm(10);
+    background: $color-gray;
+    color: $color-white;
+    cursor: pointer;
+    height: pxToEm(30);
+    width: pxToEm(30);
+    text-align: center;
+    @extend %rounded-corners;
+    font-size: $font-rem--xsl;
+    line-height: pxToEm(30);
+
+    &--active {
+      background: $color-gris-02;
+    }
+  }
+
+}

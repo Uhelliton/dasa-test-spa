@@ -1,7 +1,6 @@
 @import '../utilities/all';
 
 .l-main {
-  padding: $gap-rem--sm;
   max-width: pxToRem(1440);
   margin: 0 auto;
   width: 100%;
@@ -31,7 +30,7 @@
       }
     }
 
-    &_box {}
+    &_search { }
 
     &_title {
       color: $color-dark-02;

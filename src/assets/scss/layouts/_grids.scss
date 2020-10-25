@@ -44,3 +44,20 @@
     grid-gap: pxToRem(20);
   }
 }
+
+.row {
+  display: grid;
+}
+.col-6 {
+  grid-template-columns: 1fr;
+}
+
+.col-12 {
+  grid-template-columns: 1fr;
+}
+
+@media(min-width: $responsive-md) {
+  .col-6 {
+    grid-template-columns: 1fr 1fr;
+  }
+}

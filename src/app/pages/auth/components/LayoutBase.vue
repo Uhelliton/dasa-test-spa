@@ -43,10 +43,9 @@ export default {
   grid-template-columns: 1fr + 1fr;
   grid-gap: pxToRem(10);
   max-width: 100vw;
-  height: auto;
   min-height: 100vh;
-  padding-bottom: $gap-rem--sm;
   width: 100%;
+  background: $color-white;
 
   &_section {
     grid-column: 1;
@@ -54,7 +53,7 @@ export default {
     align-items: center;
     justify-content: center;
     color: white;
-    min-height: pxToRem(320);
+    min-height: pxToRem(150);
     background: $color-white;
 
     &:first-child {
