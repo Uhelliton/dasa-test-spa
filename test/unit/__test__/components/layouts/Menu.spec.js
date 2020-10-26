@@ -84,8 +84,7 @@ describe('Menu.vue', () => {
     window.open = jest.fn();
     wrapper.vm.onLogout = jest.fn();
 
-    const onLogout = '.icon-settings';
-    wrapper.find(onLogout).trigger('click');
+    wrapper.find({ ref: 'logout'}).trigger('click')
     expect(wrapper.vm.onLogout).toBeCalled();
   })
 
@@ -94,7 +93,7 @@ describe('Menu.vue', () => {
     const methodStub = sinon.stub()
 
     wrapper.setMethods({ onLogout: methodStub })
-    wrapper.find('.icon-settings').trigger('click')
+    wrapper.find({ ref: 'logout'}).trigger('click')
     expect(methodStub.called).toBe(true)
   })
 

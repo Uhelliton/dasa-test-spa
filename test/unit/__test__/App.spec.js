@@ -2,21 +2,27 @@
 /**
  * @jest-environment node
  */
-import { mount } from '@vue/test-utils'
-import App from '../../../src/app/pages/auth/views/AuthIndex'
+import { shallowMount } from '@vue/test-utils'
+import App from '@/app/pages/auth/views/AuthIndex'
+import LayoutExternal from '@/components/layouts/LayoutExternal'
+import LayoutAuth from '@/components/layouts/LayoutAuth'
+import SpriteSvg from '@/components/svg/SpriteSvg'
+
 
 describe('App.vue', () => {
   const build = () => {
-    const wrapper = mount(App)
+    const wrapper = shallowMount(App)
 
     return {
-      wrapper
+      wrapper,
+      LayoutExternal: () => wrapper.findComponent(LayoutExternal),
+      LayoutAuth: () => wrapper.findComponent(LayoutAuth),
+      SpriteSvg: () => wrapper.findComponent(SpriteSvg)
     }
   }
 
   it('should render instance component', () => {
     const { wrapper } = build()
-    // expect(vm.$el.querySelector('.hello h1').textContent).toEqual('Welcome to Your Vue.js App')
     expect(wrapper.vm).toBeTruthy()
   })
 })

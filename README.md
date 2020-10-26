@@ -46,7 +46,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Sass](https://sass-lang.com/)
 - [Eslint](https://eslint.org/)
 
-### 🛠 Tecnologias
+### 🎲 Arquitetura
 
 As seguintes arquitetura e metodologia css foram usadas:
 

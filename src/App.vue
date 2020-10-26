@@ -1,7 +1,7 @@
 <script>
 import LayoutExternal from './components/layouts/LayoutExternal'
 import LayoutAuth from './components/layouts/LayoutAuth'
-import SpriteSvg from './components/svg/sprite-svg'
+import SpriteSvg from './components/svg/SpriteSvg'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -16,8 +16,7 @@ export default {
 <template>
   <div id="app">
     <sprite-svg />
-    <layout-auth v-if="isAuthenticate"
-                 class="l-main" />
-    <Layout-external v-else />
+    <layout-auth v-if="isAuthenticate" class="l-main"></layout-auth>
+    <Layout-external v-else></Layout-external>
   </div>
 </template>

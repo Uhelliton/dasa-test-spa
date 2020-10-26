@@ -7,6 +7,8 @@ import UserTable from '@/app/pages/dashboard/components/UserTable'
 import CardBox from '@/components/layouts/CardBox'
 import AppTable from '@/components/table/AppTable'
 import AppInput from '@/components/form/AppInput'
+import flushPromises from "flush-promises"
+
 
 describe('UserTable.vue', () => {
   const build = () => {
@@ -41,6 +43,18 @@ describe('UserTable.vue', () => {
 
     const forId = AppInput().vm.$options.props.forId
     expect(forId).toBeTruthy()
+  })
+
+  it('should contain method fetchUsers()', () => {
+    const { wrapper } = build()
+    expect(wrapper.vm.fetchUsers).toBeTruthy()
+  })
+
+  it("should contain datatable.rows fetchUsers", async () => {
+    const { wrapper } = build()
+
+    await flushPromises()
+    expect(wrapper.vm.datatable.rows.length).toBe(0)
   })
 
 })

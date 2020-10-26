@@ -16,7 +16,7 @@ export default {
         { field: 'login', label: 'Login', sortable: true },
         { field: 'node_id', label: 'Node ID', sortable: true },
         { field: 'type', label: 'Tipo' },
-        { field: 'site_admin', label: 'Admin' }
+        { field: 'site_admin', label: 'Acesso' }
       ],
       rows: []
     },
@@ -68,7 +68,7 @@ export default {
           <td scope="row" data-label="Login">{{ row.login }}</td>
           <td scope="row" data-label="Node ID">{{ row.node_id }}</td>
           <td scope="row" data-label="Tipo">{{ row.type }}</td>
-          <td scope="row" data-label="Admin">
+          <td scope="row" data-label="Acesso">
             <span class="m-badge"
                   :class="[{'m-badge--success': (index % 2 == 0)}, {'m-badge--warning': (index % 2 != 0)}]">
               {{ (row.site_admin) ? 'Administrador' : 'Administrador' }}

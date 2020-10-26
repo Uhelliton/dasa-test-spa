@@ -32,7 +32,27 @@ describe('AppTable.vue', () => {
     expect(wrapper.props().filterKey).toEqual('')
   })
 
-  // it('should contain method goToPage()', () => {
+  it('should render component has computed props: filtered  and return array', () => {
+    const { wrapper } = build()
+    expect(wrapper.vm.filtered).toEqual([])
+  })
+
+  it('should render component has computed props: paginatedData  and return array', () => {
+    const { wrapper } = build()
+    expect(wrapper.vm.paginatedData).toEqual([])
+  })
+
+  it('should render component has computed props: pageNumber', () => {
+    const { wrapper } = build()
+    expect(wrapper.vm.pageNumber).toBeTruthy()
+  })
+
+  it('should contain method goToPage()', () => {
+    const { wrapper } = build()
+    expect(wrapper.vm.goToPage).toBeTruthy()
+  })
+
+  // it('should contain method should contain method goToPage()()', () => {
   //   const { wrapper } = build()
   //   const methodStub = sinon.stub()
   //
